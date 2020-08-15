@@ -1,0 +1,106 @@
+body {
+  font-family: 'Libre Baskerville', serif;
+  background-color: rgb(171, 112, 13);
+  color: white;
+}
+
+#background {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  position: absolute;
+  z-index: -1;
+}
+
+#background::after {
+  content: "";
+  background: url('assets/droneBackground.png');
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background-size: cover;
+}
+
+.navbar {
+  font-weight: 400;
+  background-color: rgb(13, 74, 0);
+  padding-top: 2%;
+}
+
+h3 {
+  color: white;
+}
+
+#title {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+#the {
+  font-size: 5vw;
+  position: absolute;
+  left: 15vw;
+  top: 25vh;
+  animation-duration: 3s;
+}
+
+#magnificent {
+  font-size: 10vw;
+  position: absolute;
+  left: 18vw;
+  top: 32vh;
+  animation-duration: 2.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+
+#meyersons {
+  font-size: 7vw;
+  position: absolute;
+  left: 40vw;
+  top: 48vh;
+  animation-duration: 3s;
+}
+
+#the, #magnificent, #meyersons {
+  animation-name: title;
+}
+
+.card {
+  background-color: rgba(171, 112, 13, 0.3);
+}
+
+#emailAddress, #emailSubject, #emailBody {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes title {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Portrait phones and smaller */
+@media screen and (max-width: 480px) {
+  #the {
+    font-size: 20px;
+    left: 5vw;
+    top: 10vh;
+  }
+
+  #magnificent {
+    font-size: 20px;
+    left: 2vw;
+    top: 20vh;
+  }
+
+  #meyersons {
+    font-size: 2000px;
+    left: 10vw;
+    top: 30vh;
+  }
+}
