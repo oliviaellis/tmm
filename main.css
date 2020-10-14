@@ -1,7 +1,17 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: 'Libre Baskerville', serif;
-  background-color: rgb(171, 112, 13);
+  font-family: 'Crimson Text', serif;
+  background-color: #80360D;
   color: white;
+}
+
+.section {
+  height: 100vh;
+  width: 100vw;
+  padding-top: 5%;
 }
 
 #background {
@@ -14,7 +24,6 @@ body {
 
 #background::after {
   content: "";
-  background: url('assets/droneBackground.png');
   opacity: 0.5;
   top: 0;
   left: 0;
@@ -23,56 +32,41 @@ body {
   position: absolute;
   z-index: -1;
   background-size: cover;
+  background:
+    url('assets/droneBackground.png');
 }
 
 .navbar {
   font-weight: 400;
   background-color: rgb(13, 74, 0);
-  padding-top: 2%;
-}
-
-h3 {
-  color: white;
 }
 
 #title {
   width: 100vw;
   height: 100vh;
-  position: relative;
 }
 
-#the {
-  font-size: 5vw;
-  position: absolute;
-  left: 15vw;
-  top: 25vh;
+#titleText {
+  color: white;
+  animation-name: title;
   animation-duration: 3s;
+  font-size: 5vw;
 }
 
-#magnificent {
+span#magnificent {
   font-size: 10vw;
-  position: absolute;
-  left: 18vw;
-  top: 32vh;
+  animation-name: titleMag;
   animation-duration: 2.5s;
   animation-delay: 0.5s;
   animation-fill-mode: backwards;
 }
 
-#meyersons {
-  font-size: 7vw;
-  position: absolute;
-  left: 40vw;
-  top: 48vh;
-  animation-duration: 3s;
-}
-
-#the, #magnificent, #meyersons {
-  animation-name: title;
-}
-
 .card {
   background-color: rgba(171, 112, 13, 0.3);
+}
+
+.modal {
+  color: black;
 }
 
 #emailAddress, #emailSubject, #emailBody {
@@ -80,6 +74,11 @@ h3 {
 }
 
 @keyframes title {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes titleMag {
   from {opacity: 0;}
   to {opacity: 1;}
 }
